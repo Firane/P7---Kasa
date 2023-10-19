@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__links {
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  display: inline;
+}
+.header__links__content {
+  color: #ff6060;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  text-decoration: none;
+}
+.header__links__content:hover {
+  text-decoration: underline;
+}
+.header__links__content__secondary {
+  margin-left: 2rem;
+}
+.header__links__content.active {
+  text-decoration: underline;
+}/*# sourceMappingURL=header.css.map */

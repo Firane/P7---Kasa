@@ -1,0 +1,36 @@
+@import "./components/Thumbs/thumbs.scss";
+@import "./components/Header/header.scss";
+@import "./components/Banner/banner.scss";
+@import "./components/footer/footer.scss";
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  padding: 8vh 12vh 0vh 12vh;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  //   gap: 63px;
+  box-sizing: border-box;
+}
+
+header {
+  margin-bottom: 4rem;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+}
