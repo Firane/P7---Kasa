@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NotFound from "./pages/NotFound";
 import About from "./pages/About";
 import Accueil from "./pages/Accueil";
+import Logement from "./pages/logement";
 import Header from "./components/Header/header";
 import Footer from "./components/footer/footer";
 
@@ -19,6 +20,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="/" element={<Accueil />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/About" element={<About />} />
+          <Route path="/logement" element={<Logement />} />
         </Routes>
         <Footer />
       </Router>
