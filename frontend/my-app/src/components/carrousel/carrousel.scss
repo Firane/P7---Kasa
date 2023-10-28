@@ -1,19 +1,23 @@
 .carrousel {
-  background: url(../../img/accommodation-20-4.jpg);
   position: relative;
-  height: 20rem;
-  margin-bottom: 2rem;
-  width: 1200px;
-  &__leftArrow {
-    position: absolute;
-    top: 50%;
-    left: 3%;
-    transform: translate(0%, -50%);
+  &__img {
+    width: 1200px;
+    height: 300px;
+    margin-bottom: 2rem;
+    object-fit: cover;
   }
-  &__rightArrow {
-    position: absolute;
-    top: 50%;
-    right: 3%;
-    transform: translate(0%, -50%);
+  &__arrows {
+    &__leftArrow {
+      position: absolute;
+      top: 50%;
+      left: 3%;
+      transform: translate(0%, -50%);
+    }
+    &__rightArrow {
+      position: absolute;
+      top: 50%;
+      right: 3%;
+      transform: translate(0%, -50%);
+    }
   }
 }

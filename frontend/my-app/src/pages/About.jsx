@@ -1,7 +1,7 @@
 function About() {
   return (
     <>
-      <p>saucisse</p>
+      <h1>A propos</h1>
     </>
   );
 }

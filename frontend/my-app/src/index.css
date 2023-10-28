@@ -7,7 +7,8 @@
   background: #f6f6f6;
   border-radius: 25px;
   padding: 1rem;
-  padding-top: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   justify-content: center;
   margin-bottom: 2rem;
 }
@@ -121,6 +122,34 @@ footer > div {
 footer > p {
   margin: 0 auto;
   padding-top: 1rem;
+}
+
+.carrousel {
+  position: relative;
+}
+.carrousel__img {
+  width: 1200px;
+  height: 300px;
+  margin-bottom: 2rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.carrousel__arrows__leftArrow {
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  transform: translate(0%, -50%);
+}
+.carrousel__arrows__rightArrow {
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  transform: translate(0%, -50%);
+}
+
+.dropdown {
+  background: #ff6060;
+  border-radius: 10px;
 }
 
 * {

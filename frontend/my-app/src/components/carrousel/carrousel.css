@@ -1,1 +1,22 @@
-/*# sourceMappingURL=carrousel.css.map */
+.carrousel {
+  position: relative;
+}
+.carrousel__img {
+  width: 1200px;
+  height: 300px;
+  margin-bottom: 2rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.carrousel__arrows__leftArrow {
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  transform: translate(0%, -50%);
+}
+.carrousel__arrows__rightArrow {
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  transform: translate(0%, -50%);
+}/*# sourceMappingURL=carrousel.css.map */
