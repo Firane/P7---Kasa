@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__links {
+    column-gap: 20px;
+    display: inline;
+    &__content {
+      color: #ff6060;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+      &__secondary {
+        margin-left: 2rem;
+      }
+      &.active {
+        text-decoration: underline;
+      }
+    }
+  }
+}
