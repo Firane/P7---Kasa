@@ -18,9 +18,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Header />
         <Routes>
           <Route path="/" element={<Accueil />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/:id" element={<Logement />} />
           <Route path="/About" element={<About />} />
-          <Route path="/logement" element={<Logement />} />
+          <Route path="/NotFound" element={<NotFound />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </Router>

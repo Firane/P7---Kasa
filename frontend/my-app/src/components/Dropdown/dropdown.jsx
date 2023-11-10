@@ -1,48 +1,56 @@
 import dropdownArrow from "../../img/arrow_back.png";
 import { useState } from "react";
-import DropdownContent from "./Dropdown_content/dropdown_content";
+import PropTypes from "prop-types";
 
-function Dropdown(infos) {
+function Dropdown({ title, css, children }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [stayClosed, setStayClosed] = useState(true);
 
   function opener() {
     if (isOpen) {
       setIsOpen(false);
     } else {
       setIsOpen(true);
+      setStayClosed(false);
     }
   }
-  if (isOpen) {
-    console.log(infos);
-    return (
-      <div className="dropdown">
-        <button className="dropdown__button">
-          Description
-          <img
-            src={dropdownArrow}
-            alt="Une fleche indiquant le déroulement du menu"
-            className="dropdown__button__arrow open"
-            onClick={opener}
-          />
-        </button>
-        <DropdownContent contents={infos.info.description} />
+  return (
+    <div className="dropdown" style={css}>
+      <button className="dropdown__button" onClick={opener}>
+        {title}
+        <img
+          src={dropdownArrow}
+          alt="Une fleche indiquant le déroulement du menu"
+          className={
+            isOpen === true
+              ? " dropdown__button__arrow opened"
+              : "dropdown__button__arrow closed"
+          }
+        />
+      </button>
+      <div
+        className={`dropdown__container ${isOpen ? "showed" : "hidden"} ${
+          stayClosed ? "default" : ""
+        }`}
+      >
+        <div
+          className={
+            isOpen === true
+              ? " dropdown__container__content showed"
+              : "dropdown__container__content hidden"
+          }
+        >
+          {children}
+        </div>
       </div>
-    );
-  } else {
-    return (
-      <div className="dropdown">
-        <button className="dropdown__button">
-          Description
-          <img
-            src={dropdownArrow}
-            alt="Une fleche indiquant le déroulement du menu"
-            className="dropdown__button__arrow"
-            onClick={opener}
-          />
-        </button>
-      </div>
-    );
-  }
+    </div>
+  );
 }
+
+Dropdown.propTypes = {
+  title: PropTypes.string.isRequired,
+  // css: PropTypes.node,
+  children: PropTypes.node,
+};
 
 export default Dropdown;

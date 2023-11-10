@@ -1,21 +1,21 @@
 import leftArrow from "../../img/VectorGauche.png";
 import rightArrow from "../../img/VectorDroite.png";
 import { useState } from "react";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 
-function Carrousel(pictures) {
+function Carrousel({ pictures }) {
   const [index, setIndex] = useState(0);
 
   function decrementCount() {
     if (index === 0) {
-      setIndex(pictures.pics.length - 1);
+      setIndex(pictures.length - 1);
     } else {
       setIndex(index - 1);
     }
   }
 
   function incrementCount() {
-    if (index === pictures.pics.length - 1) {
+    if (index === pictures.length - 1) {
       setIndex(0);
     } else {
       setIndex(index + 1);
@@ -26,10 +26,16 @@ function Carrousel(pictures) {
       <div className="carrousel">
         <img
           className="carrousel__img"
-          src={pictures.pics[index]}
+          src={pictures[index]}
           alt="Illustration du logement"
         />
-        <div className="carrousel__arrows">
+        <div
+          className={
+            pictures.length === 1
+              ? "carrousel__arrows hidden"
+              : "carrousel__arrows"
+          }
+        >
           <img
             src={leftArrow}
             alt="Fleche gauche"
@@ -50,8 +56,11 @@ function Carrousel(pictures) {
   );
 }
 
-// Carrousel.propTypes = {
-//   pictures: PropTypes.arrayOf(PropTypes.string).isRequired,
-// };
+Carrousel.propTypes = {
+  pictures: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.arrayOf(PropTypes.string),
+  ]).isRequired,
+};
 
 export default Carrousel;

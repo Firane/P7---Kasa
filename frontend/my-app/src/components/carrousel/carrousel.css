@@ -3,10 +3,11 @@
 }
 .carrousel__img {
   width: 1200px;
-  height: 300px;
+  height: 400px;
   margin-bottom: 2rem;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 25px;
 }
 .carrousel__arrows__leftArrow {
   position: absolute;

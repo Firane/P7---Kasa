@@ -1,0 +1,18 @@
+.notfound {
+  text-align: center;
+  color: #ff6060;
+  width: 1200px;
+  margin-bottom: 10rem;
+  &__title {
+    font-size: 13rem;
+    margin-bottom: 3rem;
+  }
+  & > p {
+    font-size: 2rem;
+    margin-bottom: 10rem;
+  }
+  & > a {
+    color: #ff6060;
+    font-weight: 500;
+  }
+}

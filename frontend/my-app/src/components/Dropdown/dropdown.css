@@ -1,8 +1,25 @@
+@keyframes fadeout {
+  from {
+    height: 7rem;
+  }
+  to {
+    height: 0rem;
+  }
+}
+@keyframes fadein {
+  from {
+    height: 0rem;
+  }
+  to {
+    height: 7rem;
+  }
+}
 .dropdown {
-  width: 45%;
   display: flex;
   flex-direction: column;
   background: white;
+  position: relative;
+  overflow: hidden;
 }
 .dropdown__button {
   background: #ff6060;
@@ -11,7 +28,7 @@
   padding-left: 1rem;
   color: white;
   font-weight: 500;
-  height: 2rem;
+  height: 2.5rem;
   border: none;
   position: relative;
   margin-bottom: 1rem;
@@ -23,15 +40,33 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.dropdown__content {
+.dropdown__container {
+  position: relative;
+  overflow: hidden;
+  padding-left: 1rem;
+  height: 0px;
+}
+.dropdown__container.hidden {
+  animation: fadeout 0.5s both ease-in-out;
+}
+.dropdown__container.showed {
+  animation: fadein 0.5s both ease-in-out;
+}
+.dropdown__container__content {
   background: white;
   color: #ff6060;
   font-weight: 400;
   font-size: small;
   padding-bottom: 1rem;
 }
+.dropdown__container__content > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1.1rem;
+}
 
-.open {
+.opened {
   rotate: 180deg;
   transform: translate(50%, 50%);
 }/*# sourceMappingURL=dropdown.css.map */

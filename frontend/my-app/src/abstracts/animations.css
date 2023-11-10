@@ -2,11 +2,10 @@
   from {
     height: 7rem;
   }
-  100% {
+  to {
     height: 0rem;
   }
 }
-
 @keyframes fadein {
   from {
     height: 0rem;
@@ -14,4 +13,4 @@
   to {
     height: 7rem;
   }
-}
+}/*# sourceMappingURL=animations.css.map */

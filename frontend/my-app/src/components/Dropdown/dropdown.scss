@@ -1,8 +1,11 @@
+@import "../../abstracts/animations.scss";
+
 .dropdown {
-  width: 45%;
   display: flex;
   flex-direction: column;
   background: white;
+  position: relative;
+  overflow: hidden;
   &__button {
     background: #ff6060;
     border-radius: 10px;
@@ -10,7 +13,7 @@
     padding-left: 1rem;
     color: white;
     font-weight: 500;
-    height: 2rem;
+    height: 2.5rem;
     border: none;
     position: relative;
     margin-bottom: 1rem;
@@ -22,15 +25,37 @@
       transform: translate(-50%, -50%);
     }
   }
-  &__content {
-    background: white;
-    color: #ff6060;
-    font-weight: 400;
-    font-size: small;
-    padding-bottom: 1rem;
+  &__container {
+    position: relative;
+    overflow: hidden;
+    padding-left: 1rem;
+    height: 0px;
+    &.hidden {
+      animation: fadeout 0.5s both ease-in-out;
+      &.default {
+        animation: none;
+        height: 0px;
+      }
+    }
+    &.showed {
+      animation: fadein 0.5s both ease-in-out;
+    }
+    &__content {
+      background: white;
+      color: #ff6060;
+      font-weight: 400;
+      font-size: small;
+      padding-bottom: 1rem;
+      & > ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        line-height: 1.1rem;
+      }
+    }
   }
 }
-.open {
+.opened {
   rotate: 180deg;
   transform: translate(50%, 50%);
 }
