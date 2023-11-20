@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import Thumb from "../components/Thumbs/thumbs";
-import Banner from "../components/Banner/banner";
+import Thumb from "../components/Thumbs/Thumbs";
+import Banner from "../components/Banner/Banner";
 import Cliff from "../img/e270fc8fc902a1eb738458e7b29c1899.jpg";
 // import { element } from "prop-types";
 
@@ -32,7 +32,8 @@ function Accueil() {
       <>
         <Banner img={Cliff}>
           <p className="banner__content__text">
-            Chez vous, partout et ailleurs
+            Chez vous,
+            <br /> partout et ailleurs
           </p>
         </Banner>
         <section className="location">

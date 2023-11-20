@@ -3,4 +3,8 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+#highest {
+  height: 250px;
 }/*# sourceMappingURL=About.css.map */

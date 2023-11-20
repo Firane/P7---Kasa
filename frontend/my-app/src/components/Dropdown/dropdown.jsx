@@ -2,7 +2,7 @@ import dropdownArrow from "../../img/arrow_back.png";
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-function Dropdown({ title, css, children }) {
+function Dropdown({ title, children }) {
   const [isOpen, setIsOpen] = useState(false);
   const [stayClosed, setStayClosed] = useState(true);
 
@@ -15,7 +15,7 @@ function Dropdown({ title, css, children }) {
     }
   }
   return (
-    <div className="dropdown" style={css}>
+    <div className="dropdown">
       <button className="dropdown__button" onClick={opener}>
         {title}
         <img

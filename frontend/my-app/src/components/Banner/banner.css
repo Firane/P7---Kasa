@@ -8,6 +8,12 @@
   margin-bottom: 20px;
   mix-blend-mode: darken;
 }
+@media all and (max-width: 768px) {
+  .banner {
+    height: auto;
+    border-radius: 10px;
+  }
+}
 .banner__content {
   width: 100%;
   position: relative;
@@ -22,14 +28,39 @@
   font-size: 40px;
   font-style: normal;
   font-weight: 500;
-  line-height: 142.6%;
   margin: 0;
   width: 75%;
   text-align: center;
 }
+.banner__content__text > br {
+  display: none;
+}
+@media all and (max-width: 768px) {
+  .banner__content__text > br {
+    display: block;
+  }
+}
+@media all and (max-width: 768px) {
+  .banner__content__text {
+    text-align: left;
+    font-size: 2rem;
+    width: 90%;
+    font-weight: 400;
+  }
+}
 .banner__content__img {
   flex-shrink: 0;
-  min-width: 100%;
+  width: 100%;
   min-height: 100%;
   filter: brightness(72%);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media all and (max-width: 768px) {
+  .banner__content__img {
+    height: 130px;
+    border-radius: 10px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }/*# sourceMappingURL=banner.css.map */

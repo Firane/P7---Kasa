@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams, Navigate } from "react-router-dom";
-import Carrousel from "../components/carrousel/carrousel";
-import Dropdown from "../components/Dropdown/dropdown";
-import Tag from "../components/tag/tag";
+import Carrousel from "../components/Carrousel/Carrousel";
+import Dropdown from "../components/Dropdown/Dropdown";
+import Tag from "../components/Tag/Tag";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 

@@ -1,11 +1,11 @@
-import Banner from "../components/Banner/banner";
+import Banner from "../components/Banner/Banner";
 import Moutain from "../img/b9995860bb6384a77ca7dc9bf52da3be.jpg";
-import Dropdown from "../components/Dropdown/dropdown";
+import Dropdown from "../components/Dropdown/Dropdown";
 
 function About() {
   return (
     <>
-      <Banner img={Moutain} />
+      <Banner img={Moutain} id="highest" />
       <div className="dropdowns">
         <Dropdown title="Fiabilité" css={{ width: 70 + "%" }}>
           <p>
