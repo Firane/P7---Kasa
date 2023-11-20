@@ -6,8 +6,8 @@ function About() {
   return (
     <>
       <Banner img={Moutain} id="highest" />
-      <div className="dropdowns">
-        <Dropdown title="Fiabilité" css={{ width: 70 + "%" }}>
+      <div className="dropdowns" id="desktop__display">
+        <Dropdown title="Fiabilité">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi eaque
             nobis sit inventore cum asperiores reprehenderit illo dolores ad
@@ -16,14 +16,14 @@ function About() {
             doloremque eius nostrum mollitia amet nemo.
           </p>
         </Dropdown>
-        <Dropdown title="Respect" css={{ width: 70 + "%" }}>
+        <Dropdown title="Respect">
           <p>
             La bienveillance fait partie des valeurs fondatrices de Kasa. Tout
             comportement discriminatoire ou de perturbation du voisinage
             entraînera une exclusion de notre plateforme.
           </p>
         </Dropdown>
-        <Dropdown title="Services" css={{ width: 70 + "%" }}>
+        <Dropdown title="Services">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi eaque
             nobis sit inventore cum asperiores reprehenderit illo dolores ad
@@ -32,7 +32,7 @@ function About() {
             doloremque eius nostrum mollitia amet nemo.
           </p>
         </Dropdown>
-        <Dropdown title="Sécurité" css={{ width: 70 + "%" }}>
+        <Dropdown title="Sécurité">
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             Consectetur obcaecati amet qui deleniti nemo optio ab molestias

@@ -7,4 +7,15 @@
 
 #highest {
   height: 250px;
+}
+
+#desktop__display {
+  width: 85%;
+  margin: 0 auto;
+}
+@media all and (max-width: 768px) {
+  #desktop__display {
+    width: 100%;
+    margin: unset;
+  }
 }/*# sourceMappingURL=About.css.map */
