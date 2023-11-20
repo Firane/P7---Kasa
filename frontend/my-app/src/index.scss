@@ -1,9 +1,15 @@
-@import "./components/Thumbs/thumbs.scss";
-@import "./components/Header/header.scss";
-@import "./components/Banner/banner.scss";
-@import "./components/footer/footer.scss";
-@import "./components/carrousel/carrousel.scss";
-@import "./components/Dropdown/dropdown.scss";
+@import "./components/Thumbs/Thumbs.scss";
+@import "./components/Header/Header.scss";
+@import "./components/Banner/Banner.scss";
+@import "./components/footer/Footer.scss";
+@import "./components/carrousel/Carrousel.scss";
+@import "./components/Dropdown/Dropdown.scss";
+@import "./components/tag/Tag.scss";
+@import "./pages/Logement.scss";
+@import "./pages/About.scss";
+@import "./pages/NotFound.scss";
+@import "./abstracts/mixins.scss";
+
 * {
   font-family: "Montserrat", sans-serif;
 }
@@ -19,8 +25,11 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  //   gap: 63px;
   box-sizing: border-box;
+  @include mobile {
+    padding: 0;
+    margin: 1rem;
+  }
 }
 
 header {
@@ -33,5 +42,35 @@ code {
 
 #root {
   max-width: 1200px;
+  // min-width: 800px;
   margin: 0 auto;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+.grey {
+  color: #e3e3e3;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

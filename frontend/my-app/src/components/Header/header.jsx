@@ -8,15 +8,6 @@ function Header() {
         <img className="header__img__file" src={logo} alt="Logo de Kasa" />
       </div>
       <div className="header__links">
-        {/* <Link to="/" className="header__links__content">
-          Accueil
-        </Link>
-        <Link
-          to="/about"
-          className="header__links__content header__links__content__secondary"
-        >
-          A Propos
-        </Link> */}
         <NavLink
           to="/"
           className={({ isActive, isPending }) =>
@@ -26,7 +17,6 @@ function Header() {
               ? "header__links__content active"
               : "header__links__content"
           }
-          header__links__content
         >
           Accueil
         </NavLink>

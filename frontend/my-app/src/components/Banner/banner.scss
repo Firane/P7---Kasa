@@ -1,3 +1,5 @@
+@import "../../abstracts/mixins.scss";
+
 .banner {
   display: flex;
   justify-content: center;
@@ -7,6 +9,10 @@
   border-radius: 25px;
   margin-bottom: 20px;
   mix-blend-mode: darken;
+  @include mobile {
+    height: auto;
+    border-radius: 10px;
+  }
   &__content {
     width: 100%;
     position: relative;
@@ -20,16 +26,33 @@
       font-size: 40px;
       font-style: normal;
       font-weight: 500;
-      line-height: 142.6%;
       margin: 0;
       width: 75%;
       text-align: center;
+      & > br {
+        display: none;
+        @include mobile {
+          display: block;
+        }
+      }
+      @include mobile {
+        text-align: left;
+        font-size: 2rem;
+        width: 90%;
+        font-weight: 400;
+      }
     }
     &__img {
       flex-shrink: 0;
-      min-width: 100%;
+      width: 100%;
       min-height: 100%;
       filter: brightness(72%);
+      object-fit: cover;
+      @include mobile {
+        height: 130px;
+        border-radius: 10px;
+        object-fit: cover;
+      }
     }
   }
 }

@@ -1,20 +1,17 @@
-import fond from "../../img/e270fc8fc902a1eb738458e7b29c1899.jpg";
+import PropTypes from "prop-types";
 
-function Banniere() {
+function Banniere({ img, id, children }) {
   return (
     <div>
       <div className="banner">
         <div className="banner__content">
           <img
             className="banner__content__img"
-            src={fond}
+            id={id}
+            src={img}
             alt="Endroit avec la mer et des falaises"
-            width="870"
-            height="1305"
           />
-          <p className="banner__content__text">
-            Chez vous, partout et ailleurs
-          </p>
+          {children}
         </div>
       </div>
     </div>
@@ -23,4 +20,8 @@ function Banniere() {
 
 export default Banniere;
 
-// il va falloir props or smtg pour dyanmiser limage de fond
+Banniere.propTypes = {
+  img: PropTypes.string.isRequired,
+  id: PropTypes.string,
+  children: PropTypes.node,
+};

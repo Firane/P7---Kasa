@@ -7,9 +7,9 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NotFound from "./pages/NotFound";
 import About from "./pages/About";
 import Accueil from "./pages/Accueil";
-import Logement from "./pages/logement";
-import Header from "./components/Header/header";
-import Footer from "./components/footer/footer";
+import Logement from "../src/pages/Logement";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -18,9 +18,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Header />
         <Routes>
           <Route path="/" element={<Accueil />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/:id" element={<Logement />} />
           <Route path="/About" element={<About />} />
-          <Route path="/logement" element={<Logement />} />
+          <Route path="/NotFound" element={<NotFound />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </Router>
