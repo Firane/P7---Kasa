@@ -1,5 +1,7 @@
 import { NavLink } from "react-router-dom";
 
+// Importation de NavLink pour le lien de redirection
+
 function NotFound() {
   return (
     <div className="notfound">

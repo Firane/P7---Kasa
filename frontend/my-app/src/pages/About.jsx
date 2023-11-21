@@ -5,7 +5,7 @@ import Dropdown from "../components/Dropdown/Dropdown";
 function About() {
   return (
     <>
-      <Banner img={Moutain} id="highest" />
+      <Banner img={Moutain} id="highest" alt="Montagnes" />
       <div className="dropdowns" id="desktop__display">
         <Dropdown title="Fiabilité">
           <p>

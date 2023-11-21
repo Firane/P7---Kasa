@@ -3,9 +3,13 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 
 function Dropdown({ title, children }) {
+  // Je déclare 2 useStage : la première servant a définir si mon dropdown est supposé être ouvert ou fermé
+  // Le deuxieme, me permet de définir un état par défault du dropdown pour l'ouverture de la page : fermé.
+
   const [isOpen, setIsOpen] = useState(false);
   const [stayClosed, setStayClosed] = useState(true);
 
+  // si c'est ouvert, je ferme, si c'est fermé, j'ouvre. Je définis le statut par default a false et le redéfinis pas, car il ne sera pas réutiliser
   function opener() {
     if (isOpen) {
       setIsOpen(false);
@@ -14,6 +18,8 @@ function Dropdown({ title, children }) {
       setStayClosed(false);
     }
   }
+
+  // J'insère une condition ici, mon useState est ouvert, je met la classe qui correspond a l'ouverture, et inversement.
   return (
     <div className="dropdown">
       <button className="dropdown__button" onClick={opener}>
@@ -28,6 +34,7 @@ function Dropdown({ title, children }) {
           }
         />
       </button>
+      {/* Ici j'ajoute une condition, celle du comportement par défault avec le useState Stayclosed */}
       <div
         className={`dropdown__container ${isOpen ? "showed" : "hidden"} ${
           stayClosed ? "default" : ""
@@ -49,7 +56,6 @@ function Dropdown({ title, children }) {
 
 Dropdown.propTypes = {
   title: PropTypes.string.isRequired,
-  // css: PropTypes.node,
   children: PropTypes.node,
 };
 
