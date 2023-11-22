@@ -56,6 +56,9 @@ function Carrousel({ pictures }) {
             onClick={incrementCount}
           />
         </div>
+        <div className="carrousel__indicator">
+          {index + 1}/{pictures.length}
+        </div>
       </div>
     </>
   );
