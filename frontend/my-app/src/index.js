@@ -21,7 +21,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="/:id" element={<Logement />} />
           <Route path="/About" element={<About />} />
           <Route path="/NotFound" element={<NotFound />} />
-          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </Router>

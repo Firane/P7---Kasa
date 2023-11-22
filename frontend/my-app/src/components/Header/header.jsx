@@ -8,6 +8,7 @@ function Header() {
         <img className="header__img__file" src={logo} alt="Logo de Kasa" />
       </div>
       <div className="header__links">
+        {/* J'utilise une fonction de navlink qui permet de savoir sur quelle page on est, et de définir une classe selon si c'est sur ce lien qu'on est ou non. */}
         <NavLink
           to="/"
           className={({ isActive, isPending }) =>
